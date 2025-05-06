@@ -7,8 +7,10 @@ export default function BlogSection() {
     <section className="w-full py-16 md:py-20 font-roboto mt-14">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-6xl font-workSans
-           font-bold text-gray-900 mb-4">
+          <h2
+            className="text-3xl md:text-6xl font-workSans
+           font-bold text-gray-900 mb-4"
+          >
             Empowering Healthcare Through Insightful Strategies
           </h2>
           <p className="text-gray-500 md:text-xl max-w-4xl mx-auto">
@@ -31,8 +33,7 @@ export default function BlogSection() {
                 className="object-cover p-6 rounded-3xl "
               />
             </div>
-            
-          
+
             <div className="p-5 space-y-3">
               <div className="text-lg font-medium text-blue-600 uppercase tracking-wider">
                 15 FEB 2023

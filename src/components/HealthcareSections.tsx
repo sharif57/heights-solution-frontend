@@ -99,7 +99,7 @@ export default function HealthcareSections() {
                 <h2 className="text-2xl md:text-5xl font-bold text-gray-900 font-workSans">
                   Optimize Your Healthcare Management with Heights Solutions
                 </h2>
-                <p className="text-lg md:text-2xl text-gray-700">
+                <p className="text-lg md:text-xl text-gray-700">
                   Transform your healthcare practice by streamlining
                   administrative tasks with our specialized services. Heights
                   Solutions empowers healthcare providers to enhance patient
