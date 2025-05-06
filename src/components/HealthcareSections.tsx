@@ -33,32 +33,7 @@ export default function HealthcareSections() {
                   improves the overall patient experience while reducing costs.
                 </p>
               </div>
-              {/* <ul className="space-y-3 list-disc pl-5">
-                <li className="flex items-start list-disc">
-                  <span className="text-sm md:text-2xl">
-                    Seamlessly connect various healthcare platforms to create a
-                    unified management system
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sm md:text-2xl">
-                    Customize workflows to meet the specific needs of your
-                    practice, enhancing productivity
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sm md:text-2xl">
-                    Facilitate secure access to patient data, promoting
-                    collaboration and engagement
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sm md:text-2xl">
-                    Implement advanced security measures to safeguard sensitive
-                    information and ensure compliance
-                  </span>
-                </li>
-              </ul> */}
+
               <ul className="list-disc pl-5 space-y-3">
                 <li className="text-sm md:text-xl">
                   Seamlessly connect various healthcare platforms to create a
@@ -151,7 +126,7 @@ export default function HealthcareSections() {
                   protection and regulatory compliance
                 </li>
               </ul>
-          
+
               <div>
                 <Link
                   href="#"
@@ -161,7 +136,6 @@ export default function HealthcareSections() {
                 </Link>
               </div>
 
-           
               <div className="flex items-center space-x-3 pt-4 border-t border-gray-200">
                 <Image
                   src="/user2.avif"
@@ -172,14 +146,14 @@ export default function HealthcareSections() {
                 />
                 <div className="text-xs md:text-lg text-gray-600">
                   <p>
-                  &ldquo;Heights Solutions has significantly enhanced our
+                    &ldquo;Heights Solutions has significantly enhanced our
                     administrative efficiency, allowing us to focus on providing
                     exceptional care for our patients.&ldquo;
                   </p>
                   <p className="mt-1 font-medium">
-                  Dr. Sarah Johnson{" "}
+                    Dr. Sarah Johnson{" "}
                     <span className="text-[#0070F3]">
-                    (Healthcare Administrator at Riverside Clinic)
+                      (Healthcare Administrator at Riverside Clinic)
                     </span>
                   </p>
                 </div>
