@@ -178,7 +178,7 @@ export default function Navbar() {
                   Managed Services{" "}
                 </Link>
                 <Link
-                  href="#"
+                  href="/wound-care"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                   Wound Care
