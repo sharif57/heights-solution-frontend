@@ -147,8 +147,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#001F3F] text-white">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+    <header className="w-full bg-[#001F3F] text-white font-roboto">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6 ">
         <div className="flex  items-center gap-10">
           {/* Logo */}
           <div className="flex items-center">
@@ -172,22 +172,28 @@ export default function Navbar() {
               </button>
               <div className="absolute left-0 top-full z-10 mt-2 w-48 rounded-md bg-white py-2 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                 <Link
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                  href="/services"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
-                  Practice Management
+                  Managed Services{" "}
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
-                  Patient Engagement
+                  Wound Care
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
-                  Revenue Cycle
+                  IT Services
+                </Link>
+                <Link
+                  href="#"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+                >
+                  Practice Optimization{" "}
                 </Link>
               </div>
             </div>
@@ -198,23 +204,23 @@ export default function Navbar() {
                 <ChevronDown className="h-4 w-4" />
               </button>
               <div className="absolute left-0 top-full z-10 mt-2 w-48 rounded-md bg-white py-2 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <Link
+                {/* <Link
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                 >
                   Case Studies
-                </Link>
+                </Link> */}
                 <Link
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                   Blog
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
-                  Support
+                 Help Center
                 </Link>
               </div>
             </div>
