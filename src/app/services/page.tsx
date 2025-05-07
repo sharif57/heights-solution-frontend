@@ -11,11 +11,11 @@ import {
 
 export default function HealthcareSolutions() {
   return (
-    <main className="min-h-screen font-roboto">
+    <main className=" font-roboto">
       {/* Hero Section */}
       <section className="w-full py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center mb-12 font-workSans">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-12 font-workSans">
             Comprehensive Healthcare Management Solutions
           </h1>
 
@@ -199,7 +199,7 @@ export default function HealthcareSolutions() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="w-full py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
+      <section className="w-full py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#E5F3FE]">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-5xl font-bold text-center mb-4">
             Why Choose Heights Solutions?
@@ -210,7 +210,7 @@ export default function HealthcareSolutions() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Enhanced Team Collaboration */}
-            <div className=" p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+            <div className=" p-6  flex flex-col items-center text-center">
               <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
                 <Users className="text-white size-10" />
               </div>
@@ -224,7 +224,7 @@ export default function HealthcareSolutions() {
             </div>
 
             {/* Data-Driven Insights */}
-            <div className=" p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+            <div className=" p-6  flex flex-col items-center text-center">
               <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
                 <BarChart3 className="text-white size-10" />
               </div>
