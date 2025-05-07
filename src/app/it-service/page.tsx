@@ -1,29 +1,52 @@
+import { PencilOff } from "lucide-react";
 import Image from "next/image";
-import {
-  DollarSign,
-  Lock,
-  Settings,
-  Users,
-  BarChart3,
-  PencilOff,
-  Clock4,
-} from "lucide-react";
+import React from "react";
 
-export default function HealthcareSolutions() {
+export default function page() {
   return (
-    <main className=" font-roboto">
-      {/* Hero Section */}
+    <div className="font-roboto">
+      <section className="w-full bg-gradient-to-b from-blue-50 to-blue-100 py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Left Column - Text Content */}
+            <div className="max-w-xl">
+              <h1 className="text-4xl md:text-6xl font-workSans font-bold text-gray-900 mb-6 leading-tight">
+                Streamline IT Systems and Infrastructure
+              </h1>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Empowering Businesses with Cutting-Edge IT Services At Heights
+                Solutions, we provide comprehensive IT solutions that ensure
+                seamless operations, enhanced security, and long-term
+                efficiency. Whether you need cloud support, vendor management,
+                or business continuity planning, we deliver tailored technology
+                solutions that drive success.
+              </p>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="relative h-[300px] sm:h-[400px] md:h-[450px] w-full">
+              <Image
+                src="/service2.avif"
+                alt="Digital interface showing AI and technology solutions"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="w-full py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-12 font-workSans">
             Comprehensive Healthcare Management Solutions
           </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-7">
             {/* Left column with image on larger screens */}
-            <div className="lg:col-span-1 relative h-64 sm:h-80 lg:h-[600px] rounded-2xl overflow-hidden">
+            <div className="lg:col-span-1 relative h-64 sm:h-80 lg:h-[700px] rounded-2xl overflow-hidden">
               <Image
-                src="/service.avif"
+                src="/services.avif"
                 alt="Healthcare professionals collaborating"
                 fill
                 className="object-cover"
@@ -42,11 +65,12 @@ export default function HealthcareSolutions() {
                     </span>
                   </div>
                   <h3 className="font-semibold text-2xl mb-2">
-                    Practice Operations
+                    Cloud Migration and Support
                   </h3>
                   <p className=" text-gray-600">
-                    Efficient, strategic operational support to enhance
-                    productivity
+                    Seamlessly transition your healthcare infrastructure to the
+                    cloud, ensuring scalable, secure, and efficient digital
+                    transformation.
                   </p>
                 </div>
 
@@ -71,11 +95,12 @@ export default function HealthcareSolutions() {
                     </span>
                   </div>
                   <h3 className="font-semibold text-2xl mb-2">
-                    Revenue Cycle Management
+                    IT Vendor Management
                   </h3>
                   <p className=" text-gray-600">
-                    Optimize reimbursement, reduce costs while maintaining high
-                    quality patient care
+                    Comprehensive IT vendor management to streamline healthcare
+                    technology partnerships, ensuring compliance,
+                    cost-effectiveness, and optimal performance.
                   </p>
                 </div>
 
@@ -99,10 +124,12 @@ export default function HealthcareSolutions() {
                       </svg>
                     </span>
                   </div>
-                  <h3 className="font-semibold text-2xl mb-2">Compliance</h3>
+                  <h3 className="font-semibold text-2xl mb-2">Tech Support</h3>
                   <p className=" text-gray-600">
-                    HIPAA Compliance & Data Security, Workplace Safety & Medical
-                    & Legal compliance
+                    24/7 expert IT support specifically designed for healthcare
+                    providers. We diagnose and resolve technical issues quickly,
+                    minimize system downtime, and maintain the highest standards
+                    of data security and compliance.
                   </p>
                 </div>
 
@@ -126,11 +153,12 @@ export default function HealthcareSolutions() {
                     </span>
                   </div>
                   <h3 className="font-semibold text-2xl mb-2">
-                    Practice Ownership & Transition
+                    Software Procurement
                   </h3>
                   <p className=" text-gray-600">
-                    Buy/Sell Advisory & Valuation, M&A Facilitation, Succession
-                    Planning & Practice Support
+                    Strategic software selection and acquisition tailored to
+                    healthcare needs, ensuring optimal technology solutions that
+                    enhance operational efficiency and patient care.
                   </p>
                 </div>
 
@@ -154,11 +182,11 @@ export default function HealthcareSolutions() {
                     </span>
                   </div>
                   <h3 className="font-semibold text-2xl mb-2">
-                    Practice Improvements
+                    Business Continuity
                   </h3>
                   <p className=" text-gray-600">
-                    Implement Effective Billing & Collection Processes &
-                    Optimize Services for Cost Savings
+                    Comprehensive business continuity planning to safeguard your
+                    healthcare operations. Our strategic approach includes:
                   </p>
                 </div>
 
@@ -185,11 +213,13 @@ export default function HealthcareSolutions() {
                     </span>
                   </div>
                   <h3 className="font-semibold text-2xl mb-2">
-                    Concierge Practice
+                    Backup & Recovery
                   </h3>
                   <p className=" text-gray-600">
-                    Buy/Sell Advisory & Valuation, Compensation Planning &
-                    Retirement Strategy
+                    Comprehensive data protection solutions designed
+                    specifically for healthcare providers. Our advanced backup
+                    and recovery services ensure: 99.99% Data Integrity and
+                    Rapid Disaster Recovery
                   </p>
                 </div>
               </div>
@@ -197,102 +227,6 @@ export default function HealthcareSolutions() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Section */}
-      <section className="w-full py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#E5F3FE]">
-        <div className="container mx-auto">
-          <h2 className="text-2xl md:text-5xl font-bold text-center mb-4">
-            Why Choose Heights Solutions?
-          </h2>
-          <p className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Streamline Healthcare Management for Optimal Patient Care
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* Enhanced Team Collaboration */}
-            <div className=" p-6  flex flex-col items-center text-center">
-              <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
-                <Users className="text-white size-10" />
-              </div>
-              <h3 className="font-semibold mb-3 text-xl">
-                Enhanced Team Collaboration
-              </h3>
-              <p className="text-lg text-gray-600">
-                Effortlessly streamline communication among healthcare providers
-                to elevate patient care and operational efficiency
-              </p>
-            </div>
-
-            {/* Data-Driven Insights */}
-            <div className=" p-6  flex flex-col items-center text-center">
-              <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
-                <BarChart3 className="text-white size-10" />
-              </div>
-              <h3 className="font-semibold mb-3 text-xl">
-                Data-Driven Insights
-              </h3>
-              <p className="text-lg text-gray-600">
-                Harness analytics to uncover opportunities for improvement and
-                enhance overall service delivery
-              </p>
-            </div>
-
-            {/* Cost Reduction */}
-            <div className=" p-6  flex flex-col items-center text-center">
-              <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
-                <DollarSign className="text-white size-10" />
-              </div>
-              <h3 className="font-semibold mb-3 text-xl">Cost Reduction</h3>
-              <p className="text-lg text-gray-600">
-                Lower operational costs without compromising on the quality of
-                patient care
-              </p>
-            </div>
-
-            {/* Secure Data Management */}
-            <div className=" p-6  flex flex-col items-center text-center">
-              <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
-                <Lock className="text-white size-10" />
-              </div>
-              <h3 className="font-semibold mb-3 text-xl">
-                Secure Data Management
-              </h3>
-              <p className="text-lg text-gray-600">
-                Adopt stringent security measures to protect patient data and
-                ensure compliance with regulations
-              </p>
-            </div>
-
-            {/* Customizable Solutions */}
-            <div className=" p-6  flex flex-col items-center text-center">
-              <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
-                <Settings className="text-white size-10" />
-              </div>
-              <h3 className="font-semibold mb-3 text-xl">
-                Customizable Solutions
-              </h3>
-              <p className="text-lg text-gray-600">
-                Adapt our solutions to your specific operational needs and
-                workflow requirements
-              </p>
-            </div>
-
-            {/* Time-Saving Automation */}
-            <div className=" p-6  flex flex-col items-center text-center">
-              <div className="size-[90px] rounded-full bg-[#00509E] flex items-center justify-center mb-4">
-                <Clock4 className="text-white size-10" />
-              </div>
-              <h3 className="font-semibold mb-3 text-xl">
-                Time-Saving Automation
-              </h3>
-              <p className="text-lg text-gray-600">
-                Automate repetitive processes to focus more on delivering
-                exceptional patient care.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
   );
 }

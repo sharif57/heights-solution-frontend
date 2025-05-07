@@ -184,13 +184,13 @@ export default function Navbar() {
                   Wound Care
                 </Link>
                 <Link
-                  href="#"
+                  href="/it-service"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                   IT Services
                 </Link>
                 <Link
-                  href="#"
+                  href="/consulting-services"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                   Practice Optimization{" "}
