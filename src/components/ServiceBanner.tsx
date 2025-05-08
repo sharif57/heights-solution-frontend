@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ServiceBanner() {
   return (
-    <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden font-roboto mb-10">
+    <div className="relative w-full h-[500px] md:h-[700px] overflow-hidden font-roboto mb-10">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -23,13 +23,11 @@ export default function ServiceBanner() {
           <h1 className="text-3xl md:text-3xl font-workSans  lg:text-6xl font-semibold text-white leading-tight mb-4">
             Smarter Financial Strategy for Independent Healthcare Practices
           </h1>
-          <p className="text-xl text-white font-semibold mb-8">
+          <p className="text-lg text-white  mb-8">
             Forecast Better. Operate Smarter. Grow Sustainably.
           </p>
         </div>
       </div>
-
-      {/* Custom Arrows Overlay - These would be better as SVGs in a real implementation */}
     </div>
   );
 }

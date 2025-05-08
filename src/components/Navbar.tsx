@@ -147,7 +147,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#001F3F] text-white font-roboto">
+    <header className="w-full bg-[#001F3F] text-white font-roboto ">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6 ">
         <div className="flex  items-center gap-10">
           {/* Logo */}
@@ -164,7 +164,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-start space-x-8 md:flex">
+          <nav className="hidden items-start space-x-8 md:flex z-50">
             <div className="relative group">
               <button className="flex items-center space-x-1 text-white py-2">
                 <span>Solutions</span>
