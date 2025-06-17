@@ -9,9 +9,9 @@ export default function Home() {
     <div>
       <Banner />
 
-      <FeaturesSection/>
+      {/* <FeaturesSection/> */}
       
-      <HealthcareSections/>
+      {/* <HealthcareSections/> */}
 
       <BlogSection />
     </div>
