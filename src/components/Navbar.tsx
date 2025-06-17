@@ -229,7 +229,7 @@ export default function Navbar() {
         {/* Desktop Buttons */}
         <div className="hidden items-center space-x-4 md:flex">
           <Link
-            href="#"
+            href="/portal"
             className="rounded-full border border-white px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
           >
             Client Portal
