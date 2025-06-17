@@ -211,13 +211,13 @@ export default function Navbar() {
                   Case Studies
                 </Link> */}
                 <Link
-                  href="#"
+                  href="/blog"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                   Blog
                 </Link>
                 <Link
-                  href="#"
+                  href="/helps"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                  Help Center
@@ -235,7 +235,7 @@ export default function Navbar() {
             Client Portal
           </Link>
           <Link
-            href="#"
+            href="/helps"
             className="rounded-full bg-[#00509E] px-5 py-3 text-sm font-medium border border-white text-white transition-colors hover:bg-[#0060d3]"
           >
             Request a Demo
