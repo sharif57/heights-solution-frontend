@@ -195,6 +195,12 @@ export default function Navbar() {
                 >
                   Practice Optimization{" "}
                 </Link>
+                <Link
+                  href="/calculator"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+                >
+                  Calculator{" "}
+                </Link>
               </div>
             </div>
 
@@ -220,7 +226,7 @@ export default function Navbar() {
                   href="/helps"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
-                 Help Center
+                  Help Center
                 </Link>
               </div>
             </div>
