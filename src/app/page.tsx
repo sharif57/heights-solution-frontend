@@ -1,5 +1,7 @@
 import Banner from "@/components/Banner";
 import BlogSection from "@/components/BlogSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import HealthcareSections from "@/components/HealthcareSections";
 
 
 
@@ -8,9 +10,9 @@ export default function Home() {
     <div>
       <Banner />
 
-      {/* <FeaturesSection/> */}
+      <FeaturesSection/>
       
-      {/* <HealthcareSections/> */}
+      <HealthcareSections/>
 
       <BlogSection />
     </div>
