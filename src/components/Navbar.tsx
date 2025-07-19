@@ -1,140 +1,4 @@
-// "use client"
 
-// import { useState } from "react"
-// import Image from "next/image"
-// import Link from "next/link"
-// import { ChevronDown, Menu } from "lucide-react"
-// import { Button } from "@/components/ui/button"
-// import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-
-// export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false)
-
-//   return (
-//     <header className="w-full  bg-[#001F3F] text-white">
-//       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-//         <div className="flex items-center">
-//           <Link href="/" className="flex items-center">
-//             <Image src="/public.svg" alt="Heights Solutions" width={140} height={40} className="h-8 w-auto" />
-//           </Link>
-//         </div>
-
-//         {/* Desktop Navigation */}
-//         <nav className="hidden items-center space-x-1 md:flex">
-//           <DropdownMenu>
-//             <DropdownMenuTrigger asChild>
-//               <Button variant="ghost" className="flex items-center space-x-1 text-white">
-//                 <span>Solutions</span>
-//                 <ChevronDown className="h-4 w-4" />
-//               </Button>
-//             </DropdownMenuTrigger>
-//             <DropdownMenuContent align="end" className="w-48">
-//               <DropdownMenuItem>
-//                 <Link href="#" className="w-full">
-//                   Practice Management
-//                 </Link>
-//               </DropdownMenuItem>
-//               <DropdownMenuItem>
-//                 <Link href="#" className="w-full">
-//                   Patient Engagement
-//                 </Link>
-//               </DropdownMenuItem>
-//               <DropdownMenuItem>
-//                 <Link href="#" className="w-full">
-//                   Revenue Cycle
-//                 </Link>
-//               </DropdownMenuItem>
-//             </DropdownMenuContent>
-//           </DropdownMenu>
-
-//           <DropdownMenu>
-//             <DropdownMenuTrigger asChild>
-//               <Button variant="ghost" className="flex items-center space-x-1 text-white">
-//                 <span>Resources</span>
-//                 <ChevronDown className="h-4 w-4" />
-//               </Button>
-//             </DropdownMenuTrigger>
-//             <DropdownMenuContent align="end" className="w-48">
-//               <DropdownMenuItem>
-//                 <Link href="#" className="w-full">
-//                   Case Studies
-//                 </Link>
-//               </DropdownMenuItem>
-//               <DropdownMenuItem>
-//                 <Link href="#" className="w-full">
-//                   Blog
-//                 </Link>
-//               </DropdownMenuItem>
-//               <DropdownMenuItem>
-//                 <Link href="#" className="w-full">
-//                   Support
-//                 </Link>
-//               </DropdownMenuItem>
-//             </DropdownMenuContent>
-//           </DropdownMenu>
-//         </nav>
-
-//         <div className="hidden items-center space-x-4 md:flex">
-//           <Button variant="ghost" className="text-white hover:bg-blue-800">
-//             Client Portal
-//           </Button>
-//           <Button className="bg-blue-600 text-white hover:bg-blue-700">Request a Demo</Button>
-//         </div>
-
-//         {/* Mobile Navigation */}
-//         <Sheet>
-//           <SheetTrigger asChild>
-//             <Button variant="ghost" size="icon" className="md:hidden text-white">
-//               <Menu className="h-6 w-6" />
-//               <span className="sr-only">Toggle menu</span>
-//             </Button>
-//           </SheetTrigger>
-//           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-//             <nav className="flex flex-col gap-4 py-6">
-//               <Link href="/" className="flex items-center px-2">
-//                 <Image src="/logo.svg" alt="Heights Solutions" width={140} height={40} className="h-8 w-auto" />
-//               </Link>
-
-//               <div className="flex flex-col space-y-3 mt-6">
-//                 <div className="px-2 py-1 font-medium">Solutions</div>
-//                 <Link href="#" className="px-4 py-2 text-sm hover:bg-gray-100 rounded-md">
-//                   Practice Management
-//                 </Link>
-//                 <Link href="#" className="px-4 py-2 text-sm hover:bg-gray-100 rounded-md">
-//                   Patient Engagement
-//                 </Link>
-//                 <Link href="#" className="px-4 py-2 text-sm hover:bg-gray-100 rounded-md">
-//                   Revenue Cycle
-//                 </Link>
-//               </div>
-
-//               <div className="flex flex-col space-y-3 mt-2">
-//                 <div className="px-2 py-1 font-medium">Resources</div>
-//                 <Link href="#" className="px-4 py-2 text-sm hover:bg-gray-100 rounded-md">
-//                   Case Studies
-//                 </Link>
-//                 <Link href="#" className="px-4 py-2 text-sm hover:bg-gray-100 rounded-md">
-//                   Blog
-//                 </Link>
-//                 <Link href="#" className="px-4 py-2 text-sm hover:bg-gray-100 rounded-md">
-//                   Support
-//                 </Link>
-//               </div>
-
-//               <div className="mt-6 space-y-4 px-2">
-//                 <Button variant="outline" className="w-full justify-center">
-//                   Client Portal
-//                 </Button>
-//                 <Button className="w-full justify-center bg-blue-600 hover:bg-blue-700">Request a Demo</Button>
-//               </div>
-//             </nav>
-//           </SheetContent>
-//         </Sheet>
-//       </div>
-//     </header>
-//   )
-// }
 
 "use client";
 
@@ -142,6 +6,19 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -234,6 +111,38 @@ export default function Navbar() {
         </div>
         {/* Desktop Buttons */}
         <div className="hidden items-center space-x-4 md:flex">
+          <Dialog>
+            <form>
+              <DialogTrigger asChild>
+                <Button variant="outline" className="rounded-full bg-[#00509E] px-4 py-5 text-sm font-medium border border-white text-white transition-colors hover:bg-[#0060d3]"
+                >Send Your Feedback</Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Send Your Feedback </DialogTitle>
+                  <DialogDescription>
+                    Please fill out the form below to send us your feedback.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4">
+                  <div className="grid gap-3">
+                    <Label htmlFor="name-1">Name</Label>
+                    <Input id="name-1" name="name" placeholder="Enter your name" />
+                  </div>
+                  <div className="grid gap-3">
+                    <Label htmlFor="username-1">Email</Label>
+                    <Input id="username-1" name="your email" defaultValue="" placeholder="Enter your email" />
+                  </div>
+                </div>
+                <DialogFooter>
+                  <DialogClose asChild>
+                    <Button variant="outline">Cancel</Button>
+                  </DialogClose>
+                  <Button type="submit">Send</Button>
+                </DialogFooter>
+              </DialogContent>
+            </form>
+          </Dialog>
           <Link
             href="/portal"
             className="rounded-full border border-white px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
