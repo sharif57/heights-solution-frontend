@@ -2,26 +2,28 @@
 
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from "./ui/button";
+import Modal from "./Modal";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [data, setData] = useState<{ role?: string } | null>(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setData(parsedUser);
+      } catch (error) {
+        console.error("Failed to parse localStorage data:", error);
+      }
+    }
+  }, []);
+
 
   return (
     <header className="w-full bg-[#001F3F] text-white font-roboto ">
@@ -105,44 +107,22 @@ export default function Navbar() {
                 >
                   Help Center
                 </Link>
+
+                {data?.role === "ADMIN" && (
+                  <Link
+                    href="/news-letter"
+                    className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+                  >
+                    All News Letter
+                  </Link>
+                )}
               </div>
             </div>
           </nav>
         </div>
         {/* Desktop Buttons */}
         <div className="hidden items-center space-x-4 md:flex">
-          <Dialog>
-            <form>
-              <DialogTrigger asChild>
-                <Button variant="outline" className="rounded-full bg-[#00509E] px-4 py-5 text-sm font-medium border border-white text-white transition-colors hover:bg-[#0060d3]"
-                >Send Your Feedback</Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
-                <DialogHeader>
-                  <DialogTitle>Send Your Feedback </DialogTitle>
-                  <DialogDescription>
-                    Please fill out the form below to send us your feedback.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4">
-                  <div className="grid gap-3">
-                    <Label htmlFor="name-1">Name</Label>
-                    <Input id="name-1" name="name" placeholder="Enter your name" />
-                  </div>
-                  <div className="grid gap-3">
-                    <Label htmlFor="username-1">Email</Label>
-                    <Input id="username-1" name="your email" defaultValue="" placeholder="Enter your email" />
-                  </div>
-                </div>
-                <DialogFooter>
-                  <DialogClose asChild>
-                    <Button variant="outline">Cancel</Button>
-                  </DialogClose>
-                  <Button type="submit">Send</Button>
-                </DialogFooter>
-              </DialogContent>
-            </form>
-          </Dialog>
+          <Modal />
           <Link
             href="/portal"
             className="rounded-full border border-white px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
@@ -240,7 +220,8 @@ export default function Navbar() {
                     Support
                   </Link>
                 </div>
-                <div className="mt-8 space-y-4">
+                <div className="mt-8 space-y-4 ">
+                  <Modal />
                   <Link
                     href="#"
                     className="block w-full rounded-full border border-white px-5 py-2 text-center font-medium text-white transition-colors hover:bg-white/10"
@@ -253,7 +234,9 @@ export default function Navbar() {
                   >
                     Request a Demo
                   </Link>
+
                 </div>
+
               </div>
             </nav>
           </div>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans, Roboto } from 'next/font/google'
+import { Toaster } from 'sonner'
+
 
 
 import "./globals.css";
@@ -35,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${workSans.variable} ${roboto.variable} antialiased`}
       >
+          <Toaster />
         <Navbar/>
         {children}
       </body>
