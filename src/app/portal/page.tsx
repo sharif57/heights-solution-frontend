@@ -36,6 +36,7 @@ export default function ClientLogin() {
         toast.success(result.message || "Login successful!")
         localStorage.setItem("token", result.data.accessToken)
         localStorage.setItem("user", JSON.stringify(result.data.user))
+        window.location.href = "/"
         router.push("/")
       } else {
         toast.error(result.message || "Login failed. Please check your credentials.")

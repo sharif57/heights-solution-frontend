@@ -109,12 +109,20 @@ export default function Navbar() {
                 </Link>
 
                 {data?.role === "ADMIN" && (
-                  <Link
+                  <div>
+                    <Link
                     href="/news-letter"
                     className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                   >
                     All News Letter
                   </Link>
+                      <Link
+                    href="/create-blog"
+                    className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+                  >
+                    Create Blog
+                  </Link>
+                  </div>
                 )}
               </div>
             </div>
