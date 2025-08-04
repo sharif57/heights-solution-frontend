@@ -43,6 +43,9 @@ export default function Modal() {
             const result = await res.json();
             console.log("✅ Submitted successfully:", result);
             toast.success(result.message || 'Feedback submitted successfully.');
+            setTimeout(() => {
+                window.location.href = "/";
+            },1000)
         } catch (error) {
             console.error("❌ Submission failed:", error);
             const errorMessage = typeof error === 'object' && error !== null && 'message' in error

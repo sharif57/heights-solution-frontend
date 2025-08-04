@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Modal from "./Modal";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,6 +24,12 @@ export default function Navbar() {
       }
     }
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  };
 
 
   return (
@@ -111,17 +118,17 @@ export default function Navbar() {
                 {data?.role === "ADMIN" && (
                   <div>
                     <Link
-                    href="/news-letter"
-                    className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
-                  >
-                    All News Letter
-                  </Link>
-                      <Link
-                    href="/create-blog"
-                    className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
-                  >
-                    Create Blog
-                  </Link>
+                      href="/news-letter"
+                      className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+                    >
+                      All News Letter
+                    </Link>
+                    <Link
+                      href="/create-blog"
+                      className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+                    >
+                      Create Blog
+                    </Link>
                   </div>
                 )}
               </div>
@@ -131,12 +138,19 @@ export default function Navbar() {
         {/* Desktop Buttons */}
         <div className="hidden items-center space-x-4 md:flex">
           <Modal />
-          <Link
-            href="/portal"
-            className="rounded-full border border-white px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
-          >
-            Client Portal
-          </Link>
+
+          {data?.role === "ADMIN" ? (
+            <Button onClick={handleLogout} className="rounded-full border border-white px-5 py-6 text-sm font-medium bg-red-400 text-white transition-colors hover:bg-white/10">LogOut</Button>
+          ) : (
+            <Link
+              href="/portal"
+              className="rounded-full border border-white px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+            >
+              Client Portal
+            </Link>
+          )}
+
+
           <Link
             href="/helps"
             className="rounded-full bg-[#00509E] px-5 py-3 text-sm font-medium border border-white text-white transition-colors hover:bg-[#0060d3]"
