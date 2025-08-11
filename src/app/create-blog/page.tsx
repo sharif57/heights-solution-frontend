@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { CalendarDays, Edit, Eye, ImageIcon, Plus, Trash2, Upload } from "lucide-react"
+import { CalendarDays, Edit, ImageIcon, Plus, Trash2, Upload } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
 interface Blog {
