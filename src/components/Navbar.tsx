@@ -107,7 +107,7 @@ export default function Navbar() {
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
                 >
                   Blog
-                </Link>
+                </Link> 
                 <Link
                   href="/helps"
                   className="block px-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
